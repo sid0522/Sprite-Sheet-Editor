@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="acceptDrops">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string>SpriteSheetEditor</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_3">
+    <item row="2" column="0">
+     <layout class="QFormLayout" name="formLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_5">
+        <property name="maximumSize">
+         <size>
+          <width>70</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Columns:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QSpinBox" name="spinBox_3">
+        <property name="maximumSize">
+         <size>
+          <width>50</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>1</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Export</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="0" column="1">
+       <widget class="QGraphicsView" name="graphicsView">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>1920</width>
+          <height>1080</height>
+         </size>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="lineWidth">
+         <number>0</number>
+        </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAsNeeded</enum>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAsNeeded</enum>
+        </property>
+        <property name="interactive">
+         <bool>false</bool>
+        </property>
+        <property name="sceneRect">
+         <rectf>
+          <x>0.000000000000000</x>
+          <y>0.000000000000000</y>
+          <width>0.000000000000000</width>
+          <height>0.000000000000000</height>
+         </rectf>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+        </property>
+        <property name="viewportUpdateMode">
+         <enum>QGraphicsView::FullViewportUpdate</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QGraphicsView" name="graphicsView_2">
+        <property name="maximumSize">
+         <size>
+          <width>1920</width>
+          <height>1080</height>
+         </size>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="lineWidth">
+         <number>0</number>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+        </property>
+        <property name="viewportUpdateMode">
+         <enum>QGraphicsView::FullViewportUpdate</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout_2">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetFixedSize</enum>
+      </property>
+      <property name="spacing">
+       <number>6</number>
+      </property>
+      <item row="1" column="1">
+       <widget class="QLabel" name="label">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>40</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Scale:</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLineEdit" name="lineEdit">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>50</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>1.0</string>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="5">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Show frames</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="11">
+       <widget class="QLabel" name="label_6">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="text">
+         <string>Reference alpha:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="11" colspan="2">
+       <widget class="QSlider" name="horizontalSlider_2">
+        <property name="maximum">
+         <number>1000</number>
+        </property>
+        <property name="value">
+         <number>1000</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="9">
+       <widget class="QSpinBox" name="spinBox_2">
+        <property name="minimumSize">
+         <size>
+          <width>50</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximum">
+         <number>999</number>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="10">
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="4" column="7">
+       <widget class="QSpinBox" name="spinBox">
+        <property name="minimumSize">
+         <size>
+          <width>50</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximum">
+         <number>999</number>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="6">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>from:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1" colspan="2">
+       <widget class="QPushButton" name="pushButton">
+        <property name="maximumSize">
+         <size>
+          <width>100</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Crop frames</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="12">
+       <widget class="QLineEdit" name="lineEdit_2">
+        <property name="maximumSize">
+         <size>
+          <width>50</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="inputMethodHints">
+         <set>Qt::ImhNone</set>
+        </property>
+        <property name="text">
+         <string>1.0</string>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="8">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>to:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="4">
+       <spacer name="horizontalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="1" column="3">
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="1" column="4">
+       <spacer name="horizontalSpacer_5">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="3" column="1" colspan="3">
+       <widget class="QSlider" name="horizontalSlider">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="maximum">
+         <number>1000</number>
+        </property>
+        <property name="value">
+         <number>1000</number>
+        </property>
+        <property name="sliderPosition">
+         <number>1000</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="invertedAppearance">
+         <bool>false</bool>
+        </property>
+        <property name="tickPosition">
+         <enum>QSlider::NoTicks</enum>
+        </property>
+        <property name="tickInterval">
+         <number>0</number>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="11" colspan="2">
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="defaultUp">
+    <bool>false</bool>
+   </property>
+   <property name="nativeMenuBar">
+    <bool>true</bool>
+   </property>
+   <widget class="QMenu" name="menuSpritesheet_Editor">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionImport"/>
+    <addaction name="actionImport_reference"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <addaction name="menuSpritesheet_Editor"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar">
+   <property name="toolTip">
+    <string/>
+   </property>
+   <property name="sizeGripEnabled">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <action name="actionImport">
+   <property name="text">
+    <string>Import frames ...</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionImport_reference">
+   <property name="text">
+    <string>Import reference ...</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
